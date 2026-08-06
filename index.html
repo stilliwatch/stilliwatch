@@ -1,3 +1,18 @@
-<h1>my eye has opened</h1>
+<body style="background-color: black;">
 
+<audio id="sound">
+    <source src="watching.mp3" type="audio/mpeg">
+</audio>
 
+<script>
+var played = false;
+
+document.onclick = function() {
+    if (played == false) {
+        document.getElementById("sound").play();
+        played = true;
+    }
+}
+</script>
+
+</body>
