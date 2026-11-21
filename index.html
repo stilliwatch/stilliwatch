@@ -14,9 +14,7 @@
         };
 
         window.onscroll = function() {
-            if (window.scrollY >= window.innerHeight * 2 - 1) {
-                window.scrollTo(0, window.innerHeight);
-            }
+            document.body.style.height = (window.scrollY + window.innerHeight * 3) + "px";
         };
     </script>
 
