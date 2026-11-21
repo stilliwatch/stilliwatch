@@ -1,28 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
+    <meta charset="utf-8">
 </head>
+<body style="background: black; margin: 0; height: 300vh;">
 
-<body style="background-color: black; color: white;">
+    <audio id="sound" src="watching.mp3"></audio>
 
-<audio id="sound">
-    <source src="watching.mp3" type="audio/mpeg">
-</audio>
+    <script>
+        document.onclick = function() {
+            document.getElementById("sound").play();
+            document.onclick = null;
+        };
 
-<div style="height: 50000px;"></div>
-
-
-<script>
-var played = false;
-
-document.onclick = function() {
-    if (played == false) {
-        document.getElementById("sound").play();
-        played = true;
-    }
-}
-</script>
+        window.onscroll = function() {
+            if (window.scrollY >= window.innerHeight * 2 - 1) {
+                window.scrollTo(0, window.innerHeight);
+            }
+        };
+    </script>
 
 </body>
 </html>
